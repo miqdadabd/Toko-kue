@@ -4,9 +4,15 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>ChocoDelight | Brownies Lumer Paling Nagih!</title>
+    
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700&family=Be+Vietnam+Pro:wght@400;500;600&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Noto+Serif:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -28,31 +34,28 @@
                         "xl": "80px"
                     },
                     "fontFamily": {
-                        "headline-md": ["Noto Serif"],
-                        "label-sm": ["Be Vietnam Pro"],
-                        "display-lg": ["Noto Serif"],
-                        "title-sm": ["Noto Serif"],
-                        "body-lg": ["Be Vietnam Pro"],
-                        "body-md": ["Be Vietnam Pro"]
-                    },
-                    "fontSize": {
-                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
-                        "label-sm": ["13px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
-                        "display-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
-                        "title-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
-                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                        "headline-md": ["Noto Serif", "serif"],
+                        "label-sm": ["Be Vietnam Pro", "sans-serif"],
+                        "display-lg": ["Noto Serif", "serif"],
+                        "title-sm": ["Noto Serif", "serif"],
+                        "body-lg": ["Be Vietnam Pro", "sans-serif"],
+                        "body-md": ["Be Vietnam Pro", "sans-serif"]
                     }
                 },
             },
         }
     </script>
     <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
         body {
             background-color: #fff8f6;
+        }
+        /* Mencegah ikon menjadi teks panjang jika koneksi lambat */
+        .material-symbols-outlined {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            overflow: hidden;
+            font-size: 24px !important;
         }
     </style>
 </head>
@@ -61,11 +64,11 @@
 <nav class="fixed top-0 w-full z-50 border-b bg-stone-50 border-stone-200 shadow-sm shadow-amber-900/10 h-20">
     <div class="max-w-[1200px] mx-auto flex justify-between items-center px-4 md:px-8 h-full">
         
-        <div class="flex items-center gap-3">
-            <button id="mobile-menu-btn" class="md:hidden text-amber-900 hover:bg-stone-200 p-2 rounded-md transition-colors">
+        <div class="flex items-center gap-2 md:gap-3">
+            <button id="mobile-menu-btn" class="md:hidden text-amber-900 hover:bg-stone-200 p-2 rounded-md transition-colors flex-shrink-0 flex items-center justify-center">
                 <span class="material-symbols-outlined">menu</span>
             </button>
-            <div class="text-2xl font-bold font-serif text-amber-950">ChocoDelight</div>
+            <div class="text-xl md:text-2xl font-bold font-serif text-amber-950 truncate">ChocoDelight</div>
         </div>
 
         <div class="hidden md:flex items-center space-x-8">
@@ -75,18 +78,18 @@
             <a class="font-serif text-base tracking-tight text-amber-900 hover:text-red-700 transition-colors" href="#">Contact</a>
         </div>
 
-        <div class="flex items-center space-x-2 md:space-x-6">
+        <div class="flex items-center space-x-1 md:space-x-6 flex-shrink-0">
             <div class="hidden lg:block relative">
                 <input class="bg-stone-100 border-none rounded-md px-4 py-1 text-sm focus:ring-1 focus:ring-amber-900 w-48" placeholder="Search..." type="text"/>
-                <span class="material-symbols-outlined absolute right-2 top-1.5 text-amber-900/50 text-xl" data-icon="search">search</span>
+                <span class="material-symbols-outlined absolute right-2 top-1.5 text-amber-900/50" style="font-size: 20px !important; width: 20px; height: 20px;">search</span>
             </div>
 
-            <div class="flex space-x-1 md:space-x-4">
-                <button class="text-amber-900 hover:bg-stone-100 p-2 rounded-md transition-transform scale-95 duration-200">
-                    <span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+            <div class="flex space-x-0 md:space-x-2">
+                <button class="text-amber-900 hover:bg-stone-100 p-2 rounded-md transition-transform scale-95 duration-200 flex items-center justify-center">
+                    <span class="material-symbols-outlined">shopping_cart</span>
                 </button>
-                <button class="text-amber-900 hover:bg-stone-100 p-2 rounded-md transition-transform scale-95 duration-200">
-                    <span class="material-symbols-outlined" data-icon="person">person</span>
+                <button class="text-amber-900 hover:bg-stone-100 p-2 rounded-md transition-transform scale-95 duration-200 flex items-center justify-center">
+                    <span class="material-symbols-outlined">person</span>
                 </button>
             </div>
         </div>
@@ -99,8 +102,8 @@
         <a class="font-serif text-base tracking-tight text-amber-900 block" href="#">Contact</a>
         
         <div class="relative w-full pt-2 border-t border-stone-200 mt-2">
-            <input class="w-full bg-stone-100 border-none rounded-md px-4 py-2 text-sm focus:ring-1 focus:ring-amber-900 mt-2" placeholder="Search..." type="text"/>
-            <span class="material-symbols-outlined absolute right-3 top-6 text-amber-900/50 text-xl" data-icon="search">search</span>
+            <input class="w-full bg-stone-100 border-none rounded-md px-4 py-2 pl-10 text-sm focus:ring-1 focus:ring-amber-900 mt-2" placeholder="Search..." type="text"/>
+            <span class="material-symbols-outlined absolute left-3 top-6 text-amber-900/50 mt-1" style="font-size: 20px !important; width: 20px; height: 20px;">search</span>
         </div>
     </div>
 </nav>
@@ -108,34 +111,34 @@
 <main class="pt-20">
     <section class="relative h-[870px] flex items-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img alt="Indulgent brownies" class="w-full h-full object-cover" data-alt="Close-up of fudgy brownies with melted chocolate chunks and sea salt flakes, warm lighting, wooden table background, high-end food photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0pfAQCh9jfmtDBbGn7rviANw9l5ABjUH2FGpmzLV-OJJnDWkwuexwvrG8IvW5wYJIquus6jasP4daj4qJDLN49XgF1odDuNeVgiRq3Ig3zHi7zQdfewbfdlLifYCkYSmUEFKgMuCXOn_ZrbR2Uba9qvZwKa5BrMJYR3hJApsu-IDwQzVh_EMU8M9QLHApef1nQVbaUCNMMJGBa9qxX2-5qDPjXl9L_cH3YmfePpqVmnQkJ5-7uZQcqm38hXFYTE0RXbQeM_fGuQIe"/>
+            <img alt="Indulgent brownies" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0pfAQCh9jfmtDBbGn7rviANw9l5ABjUH2FGpmzLV-OJJnDWkwuexwvrG8IvW5wYJIquus6jasP4daj4qJDLN49XgF1odDuNeVgiRq3Ig3zHi7zQdfewbfdlLifYCkYSmUEFKgMuCXOn_ZrbR2Uba9qvZwKa5BrMJYR3hJApsu-IDwQzVh_EMU8M9QLHApef1nQVbaUCNMMJGBa9qxX2-5qDPjXl9L_cH3YmfePpqVmnQkJ5-7uZQcqm38hXFYTE0RXbQeM_fGuQIe"/>
             <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent"></div>
         </div>
-        <div class="relative z-10 max-w-[1200px] mx-auto px-8 w-full">
-            <div class="max-w-2xl text-white">
+        <div class="relative z-10 max-w-[1200px] mx-auto px-6 md:px-8 w-full">
+            <div class="max-w-2xl text-white mt-10">
                 <span class="font-label-sm text-label-sm bg-on-tertiary-container/20 px-4 py-2 rounded-full mb-6 inline-block backdrop-blur-md">Artisanal Batch Baking</span>
-                <h1 class="font-display-lg text-display-lg mb-6 leading-tight">Brownies Lumer Paling Nagih!</h1>
-                <p class="font-body-lg text-body-lg mb-8 text-stone-200 leading-relaxed">Nikmati sensasi cokelat premium yang meleleh di setiap gigitan. Dibuat dengan cinta menggunakan bahan-bahan pilihan terbaik untuk menemani momen manismu.</p>
+                <h1 class="font-display-lg text-4xl md:text-5xl lg:text-[48px] mb-6 leading-tight font-bold">Brownies Lumer Paling Nagih!</h1>
+                <p class="font-body-lg text-base md:text-lg mb-8 text-stone-200 leading-relaxed">Nikmati sensasi cokelat premium yang meleleh di setiap gigitan. Dibuat dengan cinta menggunakan bahan-bahan pilihan terbaik untuk menemani momen manismu.</p>
                 <div class="flex flex-wrap gap-4">
-                    <button class="bg-on-tertiary-container text-white px-8 py-4 rounded-lg font-bold hover:bg-tertiary transition-colors shadow-lg">Shop Now</button>
-                    <button class="border-2 border-white/50 text-white px-8 py-4 rounded-lg font-bold hover:bg-white/10 transition-colors backdrop-blur-sm">Our Story</button>
+                    <button class="bg-on-tertiary-container text-white px-8 py-3 md:py-4 rounded-lg font-bold hover:bg-tertiary transition-colors shadow-lg">Shop Now</button>
+                    <button class="border-2 border-white/50 text-white px-8 py-3 md:py-4 rounded-lg font-bold hover:bg-white/10 transition-colors backdrop-blur-sm">Our Story</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-xl bg-surface">
-        <div class="max-w-[1200px] mx-auto px-8">
+    <section class="py-16 md:py-xl bg-surface">
+        <div class="max-w-[1200px] mx-auto px-6 md:px-8">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
                 <div>
-                    <h2 class="font-headline-md text-headline-md text-primary">Koleksi Favorit Kami</h2>
-                    <p class="text-on-surface-variant font-body-md">Pilihan brownies terpopuler bulan ini</p>
+                    <h2 class="font-headline-md text-2xl md:text-[32px] text-primary font-semibold">Koleksi Favorit Kami</h2>
+                    <p class="text-on-surface-variant font-body-md mt-2">Pilihan brownies terpopuler bulan ini</p>
                 </div>
                 <a class="text-on-tertiary-fixed-variant font-semibold hover:underline flex items-center gap-1" href="#">
-                    Lihat Semua <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+                    Lihat Semua <span class="material-symbols-outlined" style="font-size: 18px !important; width: 18px; height: 18px;">arrow_forward</span>
                 </a>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="group">
                     <div class="relative overflow-hidden rounded-xl aspect-square mb-4 shadow-sm">
                         <img alt="Classic Brownie" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABOwvbZWR8YOo7Q7wkz-iuaoYbS7iQOLBJ8kJK9UMwrc1qrRC5h1-g3HjCYRZOpHdQoCdiDh3PP3lFwQGEqBp_DaN6AkWyC9OLYKrTolIWn18ejjtzaCak-yD4BWPcfMclQHhJwJzCsw_kqpKmrFA9ukTiw01ZZXMVhgokVKEfB5h0azCbwE1V_yOTq0gf07HR3w4AFwiEHRzfbVFlbjJQ_Sueb7ddyuVJSPflTZoIjZ7y6Mp8XdSPQdsDA8cF5XZ8Si95iBvPfK3i"/>
@@ -173,13 +176,13 @@
         </div>
     </section>
 
-    <section class="py-xl bg-secondary-container">
-        <div class="max-w-[1200px] mx-auto px-8">
-            <div class="text-center mb-16">
-                <h2 class="font-headline-md text-headline-md text-primary mb-4">Kenapa ChocoDelight?</h2>
+    <section class="py-16 md:py-xl bg-secondary-container">
+        <div class="max-w-[1200px] mx-auto px-6 md:px-8">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="font-headline-md text-2xl md:text-[32px] text-primary mb-4 font-semibold">Kenapa ChocoDelight?</h2>
                 <div class="w-24 h-1 bg-on-tertiary-container mx-auto rounded-full"></div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
                 <div class="bg-white p-8 rounded-2xl shadow-sm text-center">
                     <div class="w-16 h-16 bg-surface-container-highest rounded-full flex items-center justify-center mx-auto mb-6">
                         <span class="material-symbols-outlined text-on-tertiary-fixed-variant text-3xl">pan_tool</span>
@@ -205,17 +208,17 @@
         </div>
     </section>
 
-    <section class="py-xl">
+    <section class="py-16 md:py-xl">
         <div class="max-w-[1000px] mx-auto px-4 md:px-8">
             <div class="bg-primary rounded-3xl p-8 md:p-12 relative overflow-hidden">
                 <div class="absolute -right-20 -top-20 w-64 h-64 bg-on-tertiary-container/10 rounded-full blur-3xl"></div>
                 <div class="absolute -left-20 -bottom-20 w-64 h-64 bg-on-tertiary-container/10 rounded-full blur-3xl"></div>
                 <div class="relative z-10 text-center text-white">
-                    <h2 class="font-headline-md text-headline-md mb-4">Dapatkan Diskon 10%</h2>
+                    <h2 class="font-headline-md text-2xl md:text-[32px] mb-4 font-semibold">Dapatkan Diskon 10%</h2>
                     <p class="font-body-md mb-8 text-stone-300">Berlangganan newsletter kami untuk info promo menarik dan rilis menu terbaru.</p>
                     <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
                         <input class="flex-grow rounded-xl bg-white/10 border-white/20 text-white placeholder-white/50 px-6 py-4 focus:ring-on-tertiary-container focus:border-on-tertiary-container" placeholder="Email Anda" type="email"/>
-                        <button class="bg-on-tertiary-container text-white px-8 py-4 rounded-xl font-bold hover:bg-tertiary transition-colors" type="submit">Daftar</button>
+                        <button class="bg-on-tertiary-container text-white px-8 py-4 rounded-xl font-bold hover:bg-tertiary transition-colors w-full sm:w-auto" type="submit">Daftar</button>
                     </form>
                 </div>
             </div>
@@ -224,18 +227,18 @@
 </main>
 
 <footer class="w-full border-t bg-stone-100 border-stone-200">
-    <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16">
+    <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 px-6 md:px-8 py-12 md:py-16">
         <div class="col-span-1 md:col-span-1">
-            <div class="text-xl font-bold font-serif text-amber-900 mb-6">ChocoDelight</div>
+            <div class="text-xl font-bold font-serif text-amber-900 mb-4 md:mb-6">ChocoDelight</div>
             <p class="font-serif text-sm leading-relaxed text-amber-800/70 mb-6">Menyajikan brownies artisanal terbaik untuk pecinta cokelat sejati di seluruh Indonesia.</p>
             <div class="flex space-x-4">
-                <a class="text-amber-900 opacity-80 hover:opacity-100" href="#"><span class="material-symbols-outlined">social_leaderboard</span></a>
-                <a class="text-amber-900 opacity-80 hover:opacity-100" href="#"><span class="material-symbols-outlined">camera</span></a>
+                <a class="text-amber-900 opacity-80 hover:opacity-100 flex items-center justify-center" href="#"><span class="material-symbols-outlined">social_leaderboard</span></a>
+                <a class="text-amber-900 opacity-80 hover:opacity-100 flex items-center justify-center" href="#"><span class="material-symbols-outlined">camera</span></a>
             </div>
         </div>
         <div>
-            <h4 class="font-bold text-amber-900 mb-6 font-serif">Toko</h4>
-            <ul class="space-y-4">
+            <h4 class="font-bold text-amber-900 mb-4 md:mb-6 font-serif">Toko</h4>
+            <ul class="space-y-3 md:space-y-4">
                 <li><a class="font-serif text-sm text-amber-800/70 hover:text-amber-950 underline transition-opacity" href="#">Brownies Klasik</a></li>
                 <li><a class="font-serif text-sm text-amber-800/70 hover:text-amber-950 underline transition-opacity" href="#">Paket Hadiah</a></li>
                 <li><a class="font-serif text-sm text-amber-800/70 hover:text-amber-950 underline transition-opacity" href="#">Wholesale</a></li>
@@ -243,8 +246,8 @@
             </ul>
         </div>
         <div>
-            <h4 class="font-bold text-amber-900 mb-6 font-serif">Bantuan</h4>
-            <ul class="space-y-4">
+            <h4 class="font-bold text-amber-900 mb-4 md:mb-6 font-serif">Bantuan</h4>
+            <ul class="space-y-3 md:space-y-4">
                 <li><a class="font-serif text-sm text-amber-800/70 hover:text-amber-950 underline transition-opacity" href="#">Shipping Policy</a></li>
                 <li><a class="font-serif text-sm text-amber-800/70 hover:text-amber-950 underline transition-opacity" href="#">Terms of Service</a></li>
                 <li><a class="font-serif text-sm text-amber-800/70 hover:text-amber-950 underline transition-opacity" href="#">Privacy Policy</a></li>
@@ -252,13 +255,13 @@
             </ul>
         </div>
         <div>
-            <h4 class="font-bold text-amber-900 mb-6 font-serif">Kontak</h4>
-            <p class="font-serif text-sm text-amber-800/70 mb-4">Jl. Cokelat No. 123, Bandung, Jawa Barat</p>
+            <h4 class="font-bold text-amber-900 mb-4 md:mb-6 font-serif">Kontak</h4>
+            <p class="font-serif text-sm text-amber-800/70 mb-2 md:mb-4">Jl. Cokelat No. 123, Bandung, Jawa Barat</p>
             <p class="font-serif text-sm text-amber-800/70">hello@chocodelight.id</p>
             <p class="font-serif text-sm text-amber-800/70 mb-4">+62 812 3456 7890</p>
         </div>
     </div>
-    <div class="max-w-[1200px] mx-auto px-8 py-8 border-t border-stone-200">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-8 py-6 md:py-8 border-t border-stone-200">
         <p class="font-serif text-sm text-amber-800/70 text-center">© 2024 ChocoDelight Artisanal Brownies. Handcrafted with love.</p>
     </div>
 </footer>
