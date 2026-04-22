@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shop - ChocoDelight Artisanal Brownies</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#ff6e5c",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#ffdad5",
+                        "primary-fixed-dim": "#ecbcaa",
+                        "tertiary": "#470001",
+                        "secondary-container": "#e9e2d3",
+                        "on-tertiary-fixed-variant": "#8c1811",
+                        "on-primary-container": "#bf9282",
+                        "on-primary-fixed": "#2e140a",
+                        "secondary-fixed": "#e9e2d3",
+                        "primary": "#32170d",
+                        "tertiary-container": "#6f0002",
+                        "primary-fixed": "#ffdbce",
+                        "outline-variant": "#d5c3bd",
+                        "background": "#fff8f6",
+                        "on-secondary-fixed-variant": "#4b463c",
+                        "surface-container-highest": "#f2ded7",
+                        "error": "#ba1a1a",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#ffb4a9",
+                        "surface-tint": "#7b5647",
+                        "primary-container": "#4b2c20",
+                        "on-background": "#231915",
+                        "secondary": "#635e53",
+                        "inverse-primary": "#ecbcaa",
+                        "on-surface": "#231915",
+                        "inverse-surface": "#392e29",
+                        "surface-bright": "#fff8f6",
+                        "surface-variant": "#f2ded7",
+                        "on-surface-variant": "#504440",
+                        "inverse-on-surface": "#ffede6",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#410000",
+                        "surface-container-high": "#f8e4dd",
+                        "surface-dim": "#e9d6cf",
+                        "outline": "#83746f",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#fff1ec",
+                        "surface-container": "#feeae2",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#fff8f6",
+                        "secondary-fixed-dim": "#cdc6b8",
+                        "on-secondary-container": "#696458",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#613e31",
+                        "on-secondary-fixed": "#1e1b13",
+                        "on-error": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "24px",
+                        "lg": "48px",
+                        "xl": "80px",
+                        "xs": "4px",
+                        "base": "8px",
+                        "sm": "12px",
+                        "container-max": "1200px",
+                        "gutter": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Noto Serif"],
+                        "label-sm": ["Be Vietnam Pro"],
+                        "display-lg": ["Noto Serif"],
+                        "title-sm": ["Noto Serif"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "body-md": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-sm": ["13px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "title-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fff8f6;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface bg-background">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 border-b bg-stone-50 border-stone-200 shadow-sm shadow-amber-900/10">
+<div class="max-w-[1200px] mx-auto flex justify-between items-center px-8 h-20">
+<div class="text-2xl font-bold font-serif text-amber-950">ChocoDelight</div>
+<div class="hidden md:flex gap-8 items-center font-serif text-base tracking-tight">
+<a class="text-amber-900 hover:text-red-700 transition-colors" href="#">Home</a>
+<a class="text-red-700 border-b-2 border-red-700 pb-1" href="#">Shop</a>
+<a class="text-amber-900 hover:text-red-700 transition-colors" href="#">About</a>
+<a class="text-amber-900 hover:text-red-700 transition-colors" href="#">Contact</a>
+</div>
+<div class="flex gap-4 items-center">
+<button class="p-2 hover:bg-stone-100 rounded-md transition-transform active:scale-95 text-amber-900">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button class="p-2 hover:bg-stone-100 rounded-md transition-transform active:scale-95 text-amber-900">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="pt-28 pb-xl max-w-[1200px] mx-auto px-8">
+<!-- Breadcrumbs -->
+<nav class="mb-lg flex items-center gap-2 font-label-sm text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="material-symbols-outlined text-sm" style="font-size: 16px;">chevron_right</span>
+<span class="text-primary font-bold">Shop</span>
+</nav>
+<div class="flex flex-col md:flex-row gap-gutter">
+<!-- Sidebar -->
+<aside class="w-full md:w-1/4 space-y-xl">
+<!-- Categories -->
+<section>
+<h3 class="font-title-sm text-primary mb-md pb-xs border-b border-outline-variant">Categories</h3>
+<ul class="space-y-sm font-body-md text-on-surface-variant">
+<li><a class="flex justify-between hover:text-primary transition-colors" href="#"><span>Signature Brownies</span><span class="text-sm">(12)</span></a></li>
+<li><a class="flex justify-between hover:text-primary transition-colors" href="#"><span>Gift Boxes</span><span class="text-sm">(4)</span></a></li>
+<li><a class="flex justify-between hover:text-primary transition-colors" href="#"><span>Seasonal Specials</span><span class="text-sm">(3)</span></a></li>
+<li><a class="flex justify-between hover:text-primary transition-colors" href="#"><span>Gluten Free</span><span class="text-sm">(2)</span></a></li>
+</ul>
+</section>
+<!-- Best Sellers -->
+<section>
+<h3 class="font-title-sm text-primary mb-md pb-xs border-b border-outline-variant">Best Sellers</h3>
+<div class="space-y-md">
+<div class="flex gap-sm group cursor-pointer">
+<div class="w-16 h-16 rounded overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Close-up of a classic fudgy brownie square on a rustic plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABOwvbZWR8YOo7Q7wkz-iuaoYbS7iQOLBJ8kJK9UMwrc1qrRC5h1-g3HjCYRZOpHdQoCdiDh3PP3lFwQGEqBp_DaN6AkWyC9OLYKrTolIWn18ejjtzaCak-yD4BWPcfMclQHhJwJzCsw_kqpKmrFA9ukTiw01ZZXMVhgokVKEfB5h0azCbwE1V_yOTq0gf07HR3w4AFwiEHRzfbVFlbjJQ_Sueb7ddyuVJSPflTZoIjZ7y6Mp8XdSPQdsDA8cF5XZ8Si95iBvPfK3i"/>
+</div>
+<div>
+<p class="font-label-sm text-on-surface group-hover:text-on-tertiary-container transition-colors">Classic Fudgy</p>
+<p class="font-label-sm text-primary font-bold">Rp 45.000</p>
+</div>
+</div>
+<div class="flex gap-sm group cursor-pointer">
+<div class="w-16 h-16 rounded overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Red velvet brownie square with white chocolate shavings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbkAewVkyXU3lR63g12VsRCjk_EF7M4-KNr-sYP9NEkm4J5JdMCBTWFgk-fmX6IkBGF0VjgLjpFxnX8ODOp7R4tyetnjS8SFl-WdvEVjbfMTFYw45Zer_HNcA24YCJ3zpX79SViigFZY-udgKkIjoZB0hgFXB3zedCTlmB7Y8IBgtugpzs1cywhbo1mwuNMZi3nC8FiGzBZ0-Jl86BBsJuQHg7vND5nbSU_aihqMBbJuSpIcbjxcRM6uaTcX0PNWZt7wk6Sj0bFxiy"/>
+</div>
+<div>
+<p class="font-label-sm text-on-surface group-hover:text-on-tertiary-container transition-colors">Red Velvet</p>
+<p class="font-label-sm text-primary font-bold">Rp 55.000</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Filter by Price -->
+<section>
+<h3 class="font-title-sm text-primary mb-md pb-xs border-b border-outline-variant">Filter by Price</h3>
+<input class="w-full h-2 bg-secondary-container rounded-lg appearance-none cursor-pointer accent-on-tertiary-container" type="range"/>
+<div class="flex justify-between mt-sm font-label-sm text-on-surface-variant">
+<span>Rp 20k</span>
+<span>Rp 200k</span>
+</div>
+</section>
+</aside>
+<!-- Product Grid -->
+<div class="w-full md:w-3/4">
+<div class="flex flex-col md:flex-row justify-between items-center mb-lg gap-sm">
+<p class="font-body-md text-on-surface-variant italic">Showing 5 artisanal treats</p>
+<select class="bg-surface border-outline-variant rounded-lg font-label-sm text-on-surface focus:ring-primary focus:border-primary px-4 py-2">
+<option>Default Sorting</option>
+<option>Sort by price: low to high</option>
+<option>Sort by price: high to low</option>
+<option>Sort by popularity</option>
+</select>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-md">
+<!-- Product Card: Classic Fudgy -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant shadow-sm hover:shadow-md transition-shadow group">
+<div class="relative aspect-square overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Stack of rich, thick, fudgy dark chocolate brownies" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbkAewVkyXU3lR63g12VsRCjk_EF7M4-KNr-sYP9NEkm4J5JdMCBTWFgk-fmX6IkBGF0VjgLjpFxnX8ODOp7R4tyetnjS8SFl-WdvEVjbfMTFYw45Zer_HNcA24YCJ3zpX79SViigFZY-udgKkIjoZB0hgFXB3zedCTlmB7Y8IBgtugpzs1cywhbo1mwuNMZi3nC8FiGzBZ0-Jl86BBsJuQHg7vND5nbSU_aihqMBbJuSpIcbjxcRM6uaTcX0PNWZt7wk6Sj0bFxiy"/>
+<span class="absolute top-sm left-sm bg-on-tertiary-container text-white font-label-sm px-3 py-1 rounded-full">Best Seller</span>
+</div>
+<div class="p-md text-center">
+<h2 class="font-title-sm text-primary mb-xs">Classic Fudgy</h2>
+<p class="font-body-md text-primary font-bold mb-md">Rp 45.000</p>
+<button class="w-full py-3 bg-on-tertiary-container text-white font-label-sm rounded-lg hover:bg-tertiary-container transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">shopping_basket</span>
+                                Add to Cart
+                            </button>
+</div>
+</div>
+<!-- Product Card: Almond Crunch -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant shadow-sm hover:shadow-md transition-shadow group">
+<div class="relative aspect-square overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Artisanal brownie topped with roasted almond slivers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwuQ9i-AoXHRDK_jrqevC2lHiN-o8tgw9RZyOBQ3fl6niUTxBhPjyW_Ev7y82Uu6wBzBwIOLwKwdXWgDEXiptmDcXaT0jUVSUF6ZT9FqCh2mxxr31dVzxpCK7W2hDvjBRBQtmC-pcGXYp5k-GfcMzvYnQxeKnqsCJ3165kmBiys9CJGPpq0ZY11WPtgpCF_hkX3cZBrTALDoM62xHa5J0_E2Cwphi2hh3Nx2kztcpMMd2841OBbw_CU9ujqNTdRUPcfwWJp8L0I0_n"/>
+</div>
+<div class="p-md text-center">
+<h2 class="font-title-sm text-primary mb-xs">Almond Crunch</h2>
+<p class="font-body-md text-primary font-bold mb-md">Rp 50.000</p>
+<button class="w-full py-3 border-2 border-primary text-primary font-label-sm rounded-lg hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">shopping_basket</span>
+                                Add to Cart
+                            </button>
+</div>
+</div>
+<!-- Product Card: Red Velvet -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant shadow-sm hover:shadow-md transition-shadow group">
+<div class="relative aspect-square overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Layered red velvet brownie with cream cheese frosting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABOwvbZWR8YOo7Q7wkz-iuaoYbS7iQOLBJ8kJK9UMwrc1qrRC5h1-g3HjCYRZOpHdQoCdiDh3PP3lFwQGEqBp_DaN6AkWyC9OLYKrTolIWn18ejjtzaCak-yD4BWPcfMclQHhJwJzCsw_kqpKmrFA9ukTiw01ZZXMVhgokVKEfB5h0azCbwE1V_yOTq0gf07HR3w4AFwiEHRzfbVFlbjJQ_Sueb7ddyuVJSPflTZoIjZ7y6Mp8XdSPQdsDA8cF5XZ8Si95iBvPfK3i"/>
+</div>
+<div class="p-md text-center">
+<h2 class="font-title-sm text-primary mb-xs">Red Velvet</h2>
+<p class="font-body-md text-primary font-bold mb-md">Rp 55.000</p>
+<button class="w-full py-3 border-2 border-primary text-primary font-label-sm rounded-lg hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">shopping_basket</span>
+                                Add to Cart
+                            </button>
+</div>
+</div>
+<!-- Product Card: Cheese Delight -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant shadow-sm hover:shadow-md transition-shadow group">
+<div class="relative aspect-square overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Gourmet brownie with a thick marbled cheesecake swirl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbkAewVkyXU3lR63g12VsRCjk_EF7M4-KNr-sYP9NEkm4J5JdMCBTWFgk-fmX6IkBGF0VjgLjpFxnX8ODOp7R4tyetnjS8SFl-WdvEVjbfMTFYw45Zer_HNcA24YCJ3zpX79SViigFZY-udgKkIjoZB0hgFXB3zedCTlmB7Y8IBgtugpzs1cywhbo1mwuNMZi3nC8FiGzBZ0-Jl86BBsJuQHg7vND5nbSU_aihqMBbJuSpIcbjxcRM6uaTcX0PNWZt7wk6Sj0bFxiy"/>
+</div>
+<div class="p-md text-center">
+<h2 class="font-title-sm text-primary mb-xs">Cheese Delight</h2>
+<p class="font-body-md text-primary font-bold mb-md">Rp 58.000</p>
+<button class="w-full py-3 border-2 border-primary text-primary font-label-sm rounded-lg hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">shopping_basket</span>
+                                Add to Cart
+                            </button>
+</div>
+</div>
+<!-- Product Card: Salted Caramel -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant shadow-sm hover:shadow-md transition-shadow group">
+<div class="relative aspect-square overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Decadent brownie drizzled with rich salted caramel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwuQ9i-AoXHRDK_jrqevC2lHiN-o8tgw9RZyOBQ3fl6niUTxBhPjyW_Ev7y82Uu6wBzBwIOLwKwdXWgDEXiptmDcXaT0jUVSUF6ZT9FqCh2mxxr31dVzxpCK7W2hDvjBRBQtmC-pcGXYp5k-GfcMzvYnQxeKnqsCJ3165kmBiys9CJGPpq0ZY11WPtgpCF_hkX3cZBrTALDoM62xHa5J0_E2Cwphi2hh3Nx2kztcpMMd2841OBbw_CU9ujqNTdRUPcfwWJp8L0I0_n"/>
+<span class="absolute top-sm left-sm bg-on-secondary-container text-white font-label-sm px-3 py-1 rounded-full">Chef's Choice</span>
+</div>
+<div class="p-md text-center">
+<h2 class="font-title-sm text-primary mb-xs">Salted Caramel</h2>
+<p class="font-body-md text-primary font-bold mb-md">Rp 52.000</p>
+<button class="w-full py-3 border-2 border-primary text-primary font-label-sm rounded-lg hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">shopping_basket</span>
+                                Add to Cart
+                            </button>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-xl flex justify-center gap-2">
+<button class="w-10 h-10 rounded-lg flex items-center justify-center border border-primary text-white bg-primary">1</button>
+<button class="w-10 h-10 rounded-lg flex items-center justify-center border border-outline-variant hover:border-primary text-primary transition-colors">2</button>
+<button class="w-10 h-10 rounded-lg flex items-center justify-center border border-outline-variant hover:border-primary text-primary transition-colors">3</button>
+<button class="w-10 h-10 rounded-lg flex items-center justify-center border border-outline-variant hover:border-primary text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t bg-stone-100 border-stone-200">
+<div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16">
+<div class="space-y-md">
+<div class="text-xl font-bold font-serif text-amber-900">ChocoDelight</div>
+<p class="font-serif text-sm leading-relaxed text-amber-800/70">Handcrafting the most indulgent brownies since 2018. We believe in high-quality cocoa and slow baking for that perfect fudgy texture.</p>
+</div>
+<div>
+<h4 class="font-title-sm text-amber-900 mb-md">Customer Care</h4>
+<ul class="space-y-sm font-serif text-sm text-amber-800/70">
+<li><a class="hover:text-amber-950 underline transition-colors" href="#">Shipping Policy</a></li>
+<li><a class="hover:text-amber-950 underline transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-amber-950 underline transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-amber-950 underline transition-colors" href="#">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-title-sm text-amber-900 mb-md">Business</h4>
+<ul class="space-y-sm font-serif text-sm text-amber-800/70">
+<li><a class="hover:text-amber-950 underline transition-colors" href="#">Wholesale</a></li>
+<li><a class="hover:text-amber-950 underline transition-colors" href="#">Corporate Gifts</a></li>
+<li><a class="hover:text-amber-950 underline transition-colors" href="#">Store Locator</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-title-sm text-amber-900 mb-md">Subscribe</h4>
+<p class="font-serif text-sm text-amber-800/70 mb-md">Join our sweet newsletter for 10% off your first box.</p>
+<div class="flex">
+<input class="bg-white border-outline-variant rounded-l-lg w-full px-4 py-2 focus:ring-primary" placeholder="Email address" type="email"/>
+<button class="bg-primary text-white px-4 py-2 rounded-r-lg font-label-sm">Join</button>
+</div>
+</div>
+</div>
+<div class="border-t border-stone-200 py-base">
+<div class="max-w-[1200px] mx-auto px-8 text-center font-serif text-sm text-amber-800/70">
+                © 2024 ChocoDelight Artisanal Brownies. Handcrafted with love.
+            </div>
+</div>
+</footer>
+</body></html>
